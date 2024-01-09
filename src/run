@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cpp_files=(
+     "main.cpp"
+     "BigDecimalInt.cpp"
+     "BigReal.cpp"
+ )
+
+output_file="output"
+
+compile_run_command="g++ ${cpp_files[*]} -o $output_file"
+
+run_command="./$output_file"
+
+$compile_run_command &&  $run_command && rm $output_file
